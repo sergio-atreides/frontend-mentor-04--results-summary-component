@@ -1,0 +1,192 @@
+* {
+    --Light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --light-slate-blue: hsl(252, 100%, 67%); /*background*/
+    --light-royal-blue: hsl(241, 81%, 54%); /*background*/
+    --violet-blue: hsla(256, 72%, 46%, 1); /*circle*/
+    --persian-blue: hsla(241, 72%, 46%, 0); /*circle*/
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Hanken Grotesk', sans-serif;
+    background-color: var(--pale-blue);
+}
+.component {
+    margin: 150px auto;
+    display: grid;
+    width: 550px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 400px;
+    background-color: var(--white);
+    overflow: hidden;
+    border: 0;
+    border-radius: 25px;
+}
+.result {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    background: linear-gradient(to top right, var(--light-royal-blue), var(--light-slate-blue));
+    border-radius: 25px;
+    align-items: center;
+    justify-items: center;
+}
+.dial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background: linear-gradient(to top, var(--persian-blue),var(--violet-blue));
+}
+.your-result {
+    color: var(--light-lavender);
+    font-size: 17px;
+    font-weight: 700;
+    margin: 25px 0 10px 0;
+}
+.total-score {
+    color: hsla(241, 100%, 89%, 0.713);
+    font-size: 12px;
+    margin: 0;
+}
+.score {
+    margin: 0;
+    text-align: center;
+    font-weight: 800;
+    color: var(--white);
+    font-size: 60px
+}
+.great {
+    margin: 10px 0 0 0;
+    color: var(--white);
+    font-size: 28px;
+    font-weight: 500;
+}
+.explanation {
+    font-size: 14px;
+    margin: 0;
+    width: 70%;
+    text-align: center;
+    color: var(--light-lavender);
+    margin-bottom: 25px;
+}
+.summary {
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+}
+.summary-txt {
+    color: var(--dark-gray-blue);
+    font-size: 17px;
+    font-weight: 700;
+    margin: 30px 0 20px 0;
+}
+.table {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr, auto);
+    row-gap: 10px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+.row-one {
+    background-color: hsla(0, 100%, 67%, 0.219);
+    color: hsl(0, 100%, 67%);
+}
+.row-two {
+    background-color: hsla(39, 100%, 56%, 0.24);
+    color: hsl(39, 100%, 56%);
+}
+.row-three {
+    background-color: hsla(166, 100%, 37%, 0.185);
+    color: hsl(166, 100%, 37%);
+}
+.row-four {
+    background-color: hsla(234, 85%, 45%, 0.185);
+    color: hsl(234, 85%, 45%);
+}
+.row-img {
+    padding-right: 10px;
+}
+.row-name,
+.row-score {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+.row-name {
+    justify-items: start;
+}
+.row-score {
+    justify-items: end;
+}
+.row-score-txt {
+    color: var(--dark-gray-blue);
+    padding-right: 7px;
+    font-weight: 700;
+}
+.row-total-score-txt {
+    color: hsla(224, 30%, 27%, 0.486);
+    font-weight: 700;
+}
+.continue-btn {
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+    font-weight: 700;
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px 0;
+    border: 0;
+    border-radius: 100px;
+}
+footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 13px; 
+    width: 100%;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 550px) {
+    .component {
+        margin: 0;
+        display: grid;
+        width: 100%;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+
+    }
+    .result {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+}
