@@ -156,6 +156,10 @@ body {
     border: 0;
     border-radius: 100px;
 }
+.continue-btn:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to top, var(--light-royal-blue), var(--light-slate-blue));
+}
 footer {
     text-align: center;
     display: flex;
